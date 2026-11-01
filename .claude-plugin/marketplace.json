@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "remake",
+  "description": "Remake any website pixel for pixel with Claude Code, then make it yours.",
+  "owner": { "name": "GoToAI Club", "url": "https://community.gotoai-agency.com" },
+  "plugins": [
+    {
+      "name": "remake",
+      "displayName": "Remake",
+      "source": "./plugins/remake",
+      "description": "Remake any website pixel for pixel, ship it privately to your GitHub and Vercel, then make it yours.",
+      "version": "0.1.0",
+      "author": { "name": "GoToAI Club", "url": "https://community.gotoai-agency.com" },
+      "homepage": "https://github.com/Pitest74/gotoai-remake",
+      "repository": "https://github.com/Pitest74/gotoai-remake",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["website", "clone", "remake", "pixel-perfect", "vercel", "github"]
+    }
+  ]
+}

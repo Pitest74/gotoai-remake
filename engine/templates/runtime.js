@@ -121,7 +121,7 @@
       e.preventDefault();
       e.stopImmediatePropagation();
       var note = document.createElement("div");
-      note.textContent = "This form isn't connected yet. Tell Claude where it should send messages.";
+      note.textContent = "Ce formulaire n'est pas encore relié. Demandez à Claude où envoyer les messages.";
       note.setAttribute("style", "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;background:#15171b;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:12px 16px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.25)");
       document.body.appendChild(note);
       setTimeout(function () { note.remove(); }, 4000);

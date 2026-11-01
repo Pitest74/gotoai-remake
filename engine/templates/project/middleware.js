@@ -16,12 +16,12 @@ async function digest(text) {
 
 function gate(url, wrong) {
   const nextPath = url.pathname.startsWith("/_remake/gate") ? "/" : url.pathname + url.search;
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Private preview</title>
+  return `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Aperçu privé</title>
 <style>:root{--ink:#15171b;--muted:#5b626d;--line:#dde0e5;--accent:#ff5a1f}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f5f7;color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px}
 form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;width:min(100%,380px);display:grid;gap:14px}h1{font:800 24px/1.1 inherit;letter-spacing:-.03em;margin:0}p{margin:0;color:var(--muted)}
 input{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px}input:focus{outline:2px solid var(--accent);outline-offset:1px}button{font:600 15px/1 inherit;letter-spacing:-.01em;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px;cursor:pointer}.err{color:#c4321b}</style></head>
-<body><form method="post" action="/_remake/gate" data-remake-gate><h1>Private preview</h1><p>This site is a work in progress. Enter the passcode to see it.</p>${wrong ? '<p class="err">That passcode didn\'t work.</p>' : ""}
-<input type="hidden" name="next" value="${nextPath.replace(/"/g, "&quot;")}"><input name="passcode" type="password" autocomplete="current-password" placeholder="Passcode" aria-label="Passcode" required autofocus><button type="submit">Open</button></form></body></html>`;
+<body><form method="post" action="/_remake/gate" data-remake-gate><h1>Aperçu privé</h1><p>Ce site est en cours de création. Entrez le mot de passe pour le voir.</p>${wrong ? '<p class="err">Ce mot de passe ne fonctionne pas.</p>' : ""}
+<input type="hidden" name="next" value="${nextPath.replace(/"/g, "&quot;")}"><input name="passcode" type="password" autocomplete="current-password" placeholder="Mot de passe" aria-label="Mot de passe" required autofocus><button type="submit">Ouvrir</button></form></body></html>`;
 }
 
 export default async function middleware(request) {
